@@ -1,6 +1,6 @@
 # BiP Notlarım · Konsept prototip
 
-> **BiP Night 2026 · Taş Kağıt Makas**
+> **BiP Night 2026 · Taş Kağıt Makas**  
 > BiP'teki "Kendime mesaj" sohbetini not, liste ve hatırlatıcı alanına çeviren tasarım önerisi.
 
 ### 🔗 Canlı demo: **https://suedakurnaz.github.io/bip-notlarim/**

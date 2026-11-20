@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>BiP Notlarım · Konsept prototip</title>
+<meta name="description" content="BiP Night 2026 · Taş Kağıt Makas · “Kendime mesaj” ve profil sayfaları için konsept prototip. Turkcell’in ya da BiP’in resmî uygulaması değildir.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Notlarım">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="preload" href="./fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./app.187e9d95a5.css">
+<script>
+  // Android/Chrome: "Ana ekrana ekle" istemini sakla, uygulama içinden düğmeyle açılsın
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); window.__bipInstall = e; window.dispatchEvent(new Event('bip-installable')); });
+  window.addEventListener('appinstalled', function () { window.__bipInstall = null; window.dispatchEvent(new Event('bip-installable')); });
+  // Klavye açılınca görünür alan küçülür: uygulamayı o alana sığdır (iOS Safari düzeni küçültmez)
+  (function () {
+    var root = document.documentElement, vv = window.visualViewport;
+    function upd() {
+      var hgt = vv ? vv.height : window.innerHeight;
+      root.style.setProperty('--app-h', Math.round(hgt) + 'px');
+      root.style.setProperty('--vv-top', Math.round(vv ? vv.offsetTop : 0) + 'px');
+    }
+    upd();
+    if (vv) { vv.addEventListener('resize', upd); vv.addEventListener('scroll', upd); }
+    window.addEventListener('resize', upd);
+    function isText(el) { return el && (el.tagName === 'TEXTAREA' || (el.tagName === 'INPUT' && !/^(checkbox|radio|button|submit|range|color|file)$/.test(el.type))); }
+    document.addEventListener('focusin', function (e) { if (isText(e.target)) root.classList.add('kb-open'); });
+    document.addEventListener('focusout', function () { setTimeout(function () { if (!isText(document.activeElement)) root.classList.remove('kb-open'); }, 50); });
+  })();
+</script>
+</head>
+<body>
+<noscript>Bu prototip JavaScript gerektirir.</noscript>
+<div id="root"></div>
+<script src="./app.02e32419a4.js"></script>
+<script>
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', function () { navigator.serviceWorker.register('./sw.js'); });
+  }
+</script>
+</body>
+</html>

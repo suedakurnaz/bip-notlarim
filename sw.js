@@ -1,6 +1,6 @@
-// BiP Notlarım · service worker (fbf1ef11f5)
-const V = 'bip-notlarim-fbf1ef11f5';
-const ASSETS = ["./", "./index.html", "./app.02e32419a4.js", "./app.187e9d95a5.css", "./manifest.webmanifest", "./fonts/inter-latin-400-normal.woff2", "./fonts/inter-latin-500-normal.woff2", "./fonts/inter-latin-600-normal.woff2", "./fonts/inter-latin-700-normal.woff2", "./fonts/inter-latin-ext-400-normal.woff2", "./fonts/inter-latin-ext-500-normal.woff2", "./fonts/inter-latin-ext-600-normal.woff2", "./fonts/inter-latin-ext-700-normal.woff2", "./icons/apple-touch-icon.png", "./icons/favicon-32.png", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png"];
+// BiP Notlarım · service worker (8bfc8a6aed)
+const V = 'bip-notlarim-8bfc8a6aed';
+const ASSETS = ["./", "./index.html", "./app.b9bc2d2196.js", "./app.187e9d95a5.css", "./manifest.webmanifest", "./fonts/inter-latin-400-normal.woff2", "./fonts/inter-latin-500-normal.woff2", "./fonts/inter-latin-600-normal.woff2", "./fonts/inter-latin-700-normal.woff2", "./fonts/inter-latin-ext-400-normal.woff2", "./fonts/inter-latin-ext-500-normal.woff2", "./fonts/inter-latin-ext-600-normal.woff2", "./fonts/inter-latin-ext-700-normal.woff2", "./icons/apple-touch-icon.png", "./icons/favicon-32.png", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png"];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(V).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
